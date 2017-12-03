@@ -42,8 +42,8 @@ int _tokenizePath(const char *json, size_t len, SearchPath *path, JSONSearchPath
                         st = S_BRACKET;
                         break;
                     default:
-                        // only letters, dollar signs and underscores are allowed at the beginning
-                        if (isalpha(c) || '$' == c || '_' == c) {
+                        // only letters, numbers, dollar signs and underscores are allowed at the beginning
+                        if (isalnum(c) || '$' == c || '_' == c) {
                             tok.len++;
                             st = S_IDENT;
                             break;
@@ -82,8 +82,8 @@ int _tokenizePath(const char *json, size_t len, SearchPath *path, JSONSearchPath
             // we're after a dot
             case S_ROOT:
             case S_DOT:
-                // start of ident token, can only be a letter, dollar sign or underscore
-                if (isalpha(c) || '$' == c || '_' == c) {
+                // start of ident token, can only be a letter, number, dollar sign or underscore
+                if (isalnum(c) || '$' == c || '_' == c) {
                     tok.len++;
                     st = S_IDENT;
                 } else {

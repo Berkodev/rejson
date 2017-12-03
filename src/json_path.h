@@ -26,7 +26,7 @@
 #define PARSE_OK 0
 #define PARSE_ERR 1
 
-#define JSON_PATH_IDENT_FIRST_CHAR_ERR "an identifier can only begin with a letter, a dollar sign or an underscore - use bracket notation for anything else"
+#define JSON_PATH_IDENT_FIRST_CHAR_ERR "an identifier can only begin with a letter, a digit, a dollar sign or an underscore - use bracket notation for anything else"
 #define JSON_PATH_IDENT_ERR "an identifier can only contain letters, digits, dollar signs or underscores - use bracket notation for anything else"
 #define JSON_PATH_BRACKET_FIRST_CHAR_ERR "square brackets can only contain integers, single- or double-quoted strings"
 #define JSON_PATH_NUMBER_ERR "expecting a digit - that's what integers are made of - or a closing bracket"
